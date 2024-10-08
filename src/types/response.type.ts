@@ -30,6 +30,9 @@ export type SuccessResponse = {
 
   /** The ID of the person using your webpage. */
   userID: string;
+
+  /** Code get from embedded sign up */
+  code: string;
 };
 
 export type FailResponse = { 

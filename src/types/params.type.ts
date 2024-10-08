@@ -26,7 +26,11 @@ export type InitParams = {
     | 'v14.0'
     | 'v15.0'
     | 'v16.0'
-    | 'v17.0';
+    | 'v17.0'
+    | 'v18.0'
+    | 'v19.0'
+    | 'v20.0'
+    | 'v21.0';
 
   /** Determines whether a cookie is created for the session or not. If enabled, it can be accessed by server-side code.
    * @default false */
@@ -102,6 +106,11 @@ export type LoginOptions = {
   /** When true, errors catched for window.FB.login() will be ignored
    *  @default false */
   ignoreSdkError?: boolean;
+
+  /** Determines whether the response data included.
+   *
+   * This can be one of ('code', 'token', 'code%20token', 'grated_scopes')*/
+  response_type?: string;
 };
 
 export type FacebookLoginProps = Pick<InitParams, 'appId'> & {
