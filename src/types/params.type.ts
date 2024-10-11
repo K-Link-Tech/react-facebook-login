@@ -111,6 +111,10 @@ export type LoginOptions = {
    *
    * This can be one of ('code', 'token', 'code%20token', 'grated_scopes')*/
   response_type?: string;
+
+  override_default_response_type?: boolean
+
+  extras?: object; 
 };
 
 export type FacebookLoginProps = Pick<InitParams, 'appId'> & {
